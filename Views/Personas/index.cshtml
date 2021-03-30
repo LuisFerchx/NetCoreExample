@@ -1,0 +1,46 @@
+@using NetCoreExample.Models
+
+@model Persona
+
+
+<partial name="~/Views/Personas/_Formulario.cshtml"></partial>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Direccion</th>
+            <th>Identificacion</th>
+            <th>Email</th>
+            <th>Fecha Nacimiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Persona P in ViewBag.Personas) 
+        {
+            <tr>
+                <td>@P.PerNombre</td>
+                <td>@P.PerApellido</td>
+                <td>@P.PerDireccion</td>
+                <td>@P.PerIdentificacion</td>
+                <td>@P.PerEmail</td>
+                <td>@P.PerFecnac</td>
+                <td><a asp-action="Modificar" asp-controller="Personas" asp-route-id="@P.PerId">Editar</a> </td>
+                <td><a asp-action="Eliminar" onclick="return confirm('Desea Eliminar este registro?')" asp-controller="Personas" asp-route-id="@P.PerId">Eliminar</a> </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+function myFunction() {
+  var txt;
+  var r = confirm("Esta seguro de eliminar?!");
+  if (r == true) {
+    
+  } else {
+    
+  }
+}
+</script>

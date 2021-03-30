@@ -1,0 +1,38 @@
+@model VenTransaccioncabecera
+<div class="row">
+        
+        <div class="form-group col">
+            <label> Secuencia </label>
+            <input type="text" asp-for="CabSecuencia" class="form-control">
+        </div>
+        <div class="form-group col">
+            <label>Fecha</label>
+            <input type="date" asp-for="CabFecha" class="form-control">
+        </div>
+        <div class="form-group col">
+            <label>Cliente</label>
+            <!-- <select asp-for="Per" asp-items="SelectList "></select> -->
+            <span asp-validation-for="Per"></span>
+        </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Secuencia</th>
+            <th>Fecha</th>
+            <th>Cliente</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (VenTransaccioncabecera P in ViewBag.VenTransaccioncabeceras) 
+        {
+            <tr>
+                <td>@P.CabSecuencia</td>
+                <td>@P.CabFecha</td>
+                <td>@P.Per.PerNombre</td>
+                <td><a asp-action="Modificar" asp-controller="ven_transaccioncabecera" asp-route-id="@P.CabId">Editar</a> </td>
+                <td><a asp-action="Eliminar" onclick="return confirm('Desea Eliminar este registro?')" asp-controller="ven_transaccioncabecera" asp-route-id="@P.CabId">Eliminar</a> </td>
+            </tr>
+        }
+    </tbody>
+</table>
