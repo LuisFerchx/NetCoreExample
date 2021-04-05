@@ -58,3 +58,8 @@ C:\Users\luixg\Google Drive\ERP\Comparativa de Frames\NetCoreExample\obj\Debug\n
 C:\Users\luixg\Google Drive\ERP\Comparativa de Frames\NetCoreExample\obj\Debug\netcoreapp3.1\Razor\Views\Personas\Modificar.cshtml.g.cs
 C:\Users\luixg\Google Drive\ERP\Comparativa de Frames\NetCoreExample\obj\Debug\netcoreapp3.1\Razor\Views\Personas\_Formulario.cshtml.g.cs
 C:\Users\luixg\Google Drive\ERP\Comparativa de Frames\NetCoreExample\obj\Debug\netcoreapp3.1\Razor\Views\Ven_transaccioncabecera\Index.cshtml.g.cs
+C:\Users\luixg\Google Drive\ERP\Comparativa de Frames\NetCoreExample\bin\Debug\netcoreapp3.1\package-lock.json
+C:\Users\luixg\Google Drive\ERP\Comparativa de Frames\NetCoreExample\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\luixg\Google Drive\ERP\Comparativa de Frames\NetCoreExample\bin\Debug\netcoreapp3.1\Syncfusion.EJ2.dll
+C:\Users\luixg\Google Drive\ERP\Comparativa de Frames\NetCoreExample\bin\Debug\netcoreapp3.1\Syncfusion.Licensing.dll
+C:\Users\luixg\Google Drive\ERP\Comparativa de Frames\NetCoreExample\obj\Debug\netcoreapp3.1\NetCoreExample.MvcApplicationPartsAssemblyInfo.cs

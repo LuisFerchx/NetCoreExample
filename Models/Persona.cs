@@ -40,7 +40,7 @@ namespace NetCoreExample.Models
         [BindProperty]
         public DateTime? PerFecnac { get; set; }
 
-       // [Required(ErrorMessage="Campo Obligatorio")]
+        //[Required(ErrorMessage="Campo Obligatorio")]
         [Column("per_email", TypeName = "character varying")]
         [BindProperty]
         public string PerEmail { get; set; }

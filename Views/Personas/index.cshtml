@@ -1,5 +1,5 @@
 @using NetCoreExample.Models
-
+@addTagHelper *, Syncfusion.EJ2
 @model Persona
 
 
@@ -32,15 +32,20 @@
         }
     </tbody>
 </table>
+<br>
+<br>
+<ejs-grid id="Grid" dataSource="@ViewBag.Personas" allowGrouping="true" enableImmutableMode="true">
+    <e-grid-editSettings allowAdding="true" allowDeleting="true" allowEditing="true"></e-grid-editSettings>
+    <e-grid-pagesettings pageSize="5"></e-grid-pagesettings>
+    <e-grid-columns>
+        <e-grid-column field="PerNombre" headerText="Nombre" textAlign="Right" width="120"></e-grid-column>
+        <e-grid-column field="PerApellido" headerText="Apellido"  width="150"></e-grid-column> 
+        <e-grid-column field="PerDireccion" headerText="Direccion" width="130" textAlign="Right"></e-grid-column>      
+        <e-grid-column field="PerIdentificacion" headerText="Identificacion" width="120"></e-grid-column>
+        <e-grid-column field="PerEmail" headerText="Correo" width="120"></e-grid-column>
+        <e-grid-column field="PerFecnac" headerText="Fecha Nacimiento" width="120" format="yMd"></e-grid-column>        
+    </e-grid-columns>
+</ejs-grid>
+<br>
+<br>
 
-<script>
-function myFunction() {
-  var txt;
-  var r = confirm("Esta seguro de eliminar?!");
-  if (r == true) {
-    
-  } else {
-    
-  }
-}
-</script>

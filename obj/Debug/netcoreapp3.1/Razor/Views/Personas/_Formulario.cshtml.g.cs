@@ -27,7 +27,7 @@ using NetCoreExample.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8dea8c9b9eac1f014b8bd8b69333487c328fb3fb", @"/Views/Personas/_Formulario.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cda30dbb4aa79881f566a83a394f01bac398c306", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"12b7648f101af72054bb3853f39bfc2c11f53715", @"/Views/_ViewImports.cshtml")]
     public class Views_Personas__Formulario : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Persona>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", "hidden", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

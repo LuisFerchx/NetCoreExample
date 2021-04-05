@@ -27,7 +27,7 @@ using NetCoreExample.Models;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3faf6f7d90c6a82c85685ca0d664da61d219a6a6", @"/Views/Ven_transaccioncabecera/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cda30dbb4aa79881f566a83a394f01bac398c306", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"12b7648f101af72054bb3853f39bfc2c11f53715", @"/Views/_ViewImports.cshtml")]
     public class Views_Ven_transaccioncabecera_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<VenTransaccioncabecera>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("type", "text", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);

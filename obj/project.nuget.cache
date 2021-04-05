@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "RQLWemKCF+VHBLR+vgbeecoUWSnUxMFjiJ0GMmLcS/pVPctNtpu6Cn4XeouXOBcHXxP/9L+SAqTYS8gva7ITPA==",
+  "dgSpecHash": "m84++ma72Byq690rFb938g0hT/ubkONEdYKKrmQMgehvJoco18HboCVRh2Ykf2dE5WEbuAEbpjpxxpzrMvS9+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\luixg\\Google Drive\\ERP\\Comparativa de Frames\\NetCoreExample\\NetCoreExample.csproj",
   "expectedPackageFiles": [
@@ -20,12 +20,26 @@
     "C:\\Users\\luixg\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\luixg\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
     "C:\\Users\\luixg\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\luixg\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\luixg\\.nuget\\packages\\npgsql\\5.0.2\\npgsql.5.0.2.nupkg.sha512",
     "C:\\Users\\luixg\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.2\\npgsql.entityframeworkcore.postgresql.5.0.2.nupkg.sha512",
+    "C:\\Users\\luixg\\.nuget\\packages\\syncfusion.ej2.aspnet.core\\19.1.0.54\\syncfusion.ej2.aspnet.core.19.1.0.54.nupkg.sha512",
+    "C:\\Users\\luixg\\.nuget\\packages\\syncfusion.licensing\\19.1.0.54\\syncfusion.licensing.19.1.0.54.nupkg.sha512",
     "C:\\Users\\luixg\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\luixg\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\luixg\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "C:\\Users\\luixg\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.6.0\\system.runtime.compilerservices.unsafe.4.6.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Se detectó una versión del paquete fuera de la restricción de dependencia: Syncfusion.EJ2.AspNet.Core 19.1.0.54 requiere Newtonsoft.Json (>= 11.0.2 && < 13.0.0), pero la versión Newtonsoft.Json 13.0.1 ya se resolvió.",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

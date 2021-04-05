@@ -25,7 +25,9 @@
       "NetCoreExample/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "5.0.4",
+          "Newtonsoft.Json": "13.0.1",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "5.0.2",
+          "Syncfusion.EJ2.AspNet.Core": "19.1.0.54",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -500,6 +502,17 @@
           "lib/netcoreapp3.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
+      "Newtonsoft.Json/13.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "13.0.0.0",
+            "fileVersion": "13.0.1.25517"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "Npgsql/5.0.2": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "4.6.0"
@@ -529,6 +542,32 @@
         },
         "compile": {
           "lib/netstandard2.1/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
+        }
+      },
+      "Syncfusion.EJ2.AspNet.Core/19.1.0.54": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "Syncfusion.Licensing": "19.1.0.54"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Syncfusion.EJ2.dll": {
+            "assemblyVersion": "19.1.0.54",
+            "fileVersion": "19.1.0.54"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/Syncfusion.EJ2.dll": {}
+        }
+      },
+      "Syncfusion.Licensing/19.1.0.54": {
+        "runtime": {
+          "lib/netcoreapp3.1/Syncfusion.Licensing.dll": {
+            "assemblyVersion": "19.1.0.54",
+            "fileVersion": "19.1.0.54"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Syncfusion.Licensing.dll": {}
         }
       },
       "System.Collections.Immutable/5.0.0": {
@@ -2305,6 +2344,13 @@
       "path": "microsoft.extensions.primitives/5.0.0",
       "hashPath": "microsoft.extensions.primitives.5.0.0.nupkg.sha512"
     },
+    "Newtonsoft.Json/13.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
+      "path": "newtonsoft.json/13.0.1",
+      "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
     "Npgsql/5.0.2": {
       "type": "package",
       "serviceable": true,
@@ -2318,6 +2364,20 @@
       "sha512": "sha512-xdhI0Y1uMxEUbH00T9kLk5m4JN8b4bAHv8fX+nU3GzdEsIgI0k0tKM4ZJ/RjkvGE1L5h4Y+oBZNNqzgetOTBtg==",
       "path": "npgsql.entityframeworkcore.postgresql/5.0.2",
       "hashPath": "npgsql.entityframeworkcore.postgresql.5.0.2.nupkg.sha512"
+    },
+    "Syncfusion.EJ2.AspNet.Core/19.1.0.54": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-hjqXWwL6u7NhLR+7IK0zA/uiLnylDlvh11O4cm3TLamKbZcNVes2ajQy+6gLu/7Bybb2SujD7NM6O4sFWtCuLw==",
+      "path": "syncfusion.ej2.aspnet.core/19.1.0.54",
+      "hashPath": "syncfusion.ej2.aspnet.core.19.1.0.54.nupkg.sha512"
+    },
+    "Syncfusion.Licensing/19.1.0.54": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8dQSVjq+P4ocJEXyQm45hv9IW5YICkuClTL2UZgNDkojBqqVHELbLhAEdyCM2Qpyh7+mg963+mXbNv3pxKWHng==",
+      "path": "syncfusion.licensing/19.1.0.54",
+      "hashPath": "syncfusion.licensing.19.1.0.54.nupkg.sha512"
     },
     "System.Collections.Immutable/5.0.0": {
       "type": "package",

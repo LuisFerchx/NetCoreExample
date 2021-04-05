@@ -48,7 +48,7 @@ namespace NetCoreExample.Controllers
             }
             context.SaveChanges(); //commit
             return RedirectToAction("Index");
-            
+          
         }
         public IActionResult Modificar(int id)
         {
