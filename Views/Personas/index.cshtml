@@ -1,9 +1,31 @@
 @using NetCoreExample.Models
+@using System
 @addTagHelper *, Syncfusion.EJ2
 @model Persona
+@{
+    //validaciones para usar en ejs-grid
+    //var ddParams = new { @params = new { value = "Germany" } };
+    //var numericParams = new { @params= new { decimals= 2, value = 5 } };
+    var dpParams = new { value = new DateTime() };
+    //var boolParams = new { @params = new { checked= true }};
+    //toolbar=toolbarItems toolbarClick="toolbarClick"
+}
+@{
+    List<object> toolbarItems = new List<object>();
+    toolbarItems.Add("Add");
+    toolbarItems.Add("Update");
+    toolbarItems.Add("Cancel");
+    //toolbarItems.Add(new { text = "Click", tooltipText = "Click", prefixIcon = "e-expand", id = "Click" });
+}
+@{
+    List<object> commands = new List<object>();
+    commands.Add(new { type = "Edit", buttonOption = new { iconCss = "e-icons e-edit", cssClass = "e-flat" } });
+    commands.Add(new { type = "Delete", buttonOption = new { iconCss = "e-icons e-delete", cssClass = "e-flat" } });
+    commands.Add(new { type = "Save", buttonOption = new { iconCss = "e-icons e-update", cssClass = "e-flat" } });
+    commands.Add(new { type = "Cancel", buttonOption = new { iconCss = "e-icons e-cancel-icon", cssClass = "e-flat" } });
+}
 
-
-<partial name="~/Views/Personas/_Formulario.cshtml"></partial>
+<!-- <partial name="~/Views/Personas/_Formulario.cshtml"></partial>
 
 <table class="table">
     <thead>
@@ -17,35 +39,84 @@
         </tr>
     </thead>
     <tbody>
-        @foreach (Persona P in ViewBag.Personas) 
-        {
-            <tr>
-                <td>@P.PerNombre</td>
-                <td>@P.PerApellido</td>
-                <td>@P.PerDireccion</td>
-                <td>@P.PerIdentificacion</td>
-                <td>@P.PerEmail</td>
-                <td>@P.PerFecnac</td>
-                <td><a asp-action="Modificar" asp-controller="Personas" asp-route-id="@P.PerId">Editar</a> </td>
-                <td><a asp-action="Eliminar" onclick="return confirm('Desea Eliminar este registro?')" asp-controller="Personas" asp-route-id="@P.PerId">Eliminar</a> </td>
-            </tr>
-        }
+        @foreach (Persona P in ViewBag.Personas)
+{
+                <tr>
+                    <td>@P.PerNombre</td>
+                    <td>@P.PerApellido</td>
+                    <td>@P.PerDireccion</td>
+                    <td>@P.PerIdentificacion</td>
+                    <td>@P.PerEmail</td>
+                    <td>@P.PerFecnac</td>
+                    <td><a asp-action="Modificar" asp-controller="Personas" asp-route-id="@P.PerId">Editar</a> </td>
+                    <td><a asp-action="Eliminar" onclick="return confirm('Desea Eliminar este registro?')" asp-controller="Personas" asp-route-id="@P.PerId">Eliminar</a> </td>
+                </tr>
+}
     </tbody>
 </table>
-<br>
-<br>
-<ejs-grid id="Grid" dataSource="@ViewBag.Personas" allowGrouping="true" enableImmutableMode="true">
-    <e-grid-editSettings allowAdding="true" allowDeleting="true" allowEditing="true"></e-grid-editSettings>
-    <e-grid-pagesettings pageSize="5"></e-grid-pagesettings>
-    <e-grid-columns>
-        <e-grid-column field="PerNombre" headerText="Nombre" textAlign="Right" width="120"></e-grid-column>
-        <e-grid-column field="PerApellido" headerText="Apellido"  width="150"></e-grid-column> 
-        <e-grid-column field="PerDireccion" headerText="Direccion" width="130" textAlign="Right"></e-grid-column>      
-        <e-grid-column field="PerIdentificacion" headerText="Identificacion" width="120"></e-grid-column>
-        <e-grid-column field="PerEmail" headerText="Correo" width="120"></e-grid-column>
-        <e-grid-column field="PerFecnac" headerText="Fecha Nacimiento" width="120" format="yMd"></e-grid-column>        
-    </e-grid-columns>
-</ejs-grid>
+-->
 <br>
 <br>
 
+
+<ejs-grid id="Grid" dataSource="@ViewBag.Personas" toolbar=toolbarItems toolbarClick="toolbarClick">
+    <e-grid-editSettings allowAdding="true" allowDeleting="true" allowEditing="true" mode="Dialog">
+    </e-grid-editSettings>
+    <e-grid-pagesettings pageSize="5"></e-grid-pagesettings>
+    <e-grid-selectionsettings type="Multiple"></e-grid-selectionsettings>
+    <e-grid-columns>
+        <e-grid-column field="PerId" headerText="Id" isPrimaryKey="true" textAlign="Right" width="120" visible="false">
+        </e-grid-column>
+        <e-grid-column field="PerNombre" headerText="Nombre" width="150" validationRules="@(new { required=true})">
+        </e-grid-column>
+        <e-grid-column field="PerApellido" headerText="Apellido" width="150" validationRules="@(new { required=true})">
+        </e-grid-column>
+        <e-grid-column field="PerDireccion" headerText="Direccion" width="150"
+            validationRules="@(new { required=true})"></e-grid-column>
+        <e-grid-column field="PerIdentificacion" headerText="Identificacion" width="120"
+            validationRules="@(new { required=true})"></e-grid-column>
+        <e-grid-column field="PerEmail" headerText="Correo" width="160" validationRules="@(new { required=true})">
+        </e-grid-column>
+        <e-grid-column field="PerFecnac" headerText="Fecha Nacimiento" width="110" format="dd/MM/yyyy"
+            validationRules="@(new { required=true})" editType="datepickeredit"></e-grid-column>
+        <e-grid-column width="80" commands="commands"></e-grid-column>
+    </e-grid-columns>
+</ejs-grid>
+<br>
+<ejs-button id="add" content="Add" isPrimary="true"></ejs-button>
+<ejs-button id="delete" content="Delete" isPrimary="true"></ejs-button>
+<br>
+
+<script>
+    function toolbarClick(args) {
+        if (args.item.id === 'Click') {
+            alert("Custom toolbar click...");
+        }
+    }
+
+    document.getElementById('add').onclick = function () {
+        var grid = document.getElementById("Grid").ej2_instances[0];
+        var data = { OrderID: 10247, CustomerID: "ASDFG", Freight: 40.4, OrderDate: new Date(8367642e5) };
+        grid.dataSource.unshift(data); // add new record.
+        grid.refresh(); // refresh the Grid.
+    };
+
+    document.getElementById('delete').onclick = function () {
+        var grid = document.getElementById("Grid").ej2_instances[0];
+        if (grid.getSelectedRowIndexes().length) {
+            var selectedRow = grid.getSelectedRowIndexes()[0];
+            grid.dataSource.splice(selectedRow, 1); // delete the selected record.
+        } else {
+            alert("No existen filas seleccionadas");
+        }
+        grid.refresh(); // refresh the Grid.
+    };
+
+
+</script>
+
+<style>
+    .e-expand::before {
+        content: '\e5b8';
+    }
+</style>
